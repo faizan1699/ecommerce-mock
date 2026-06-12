@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — MP Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="auth-wrap">
+    <h2>Login</h2>
+    <p class="auth-sub">Welcome back! Please sign in to continue.</p>
+
+    <div class="hint">
+      <strong>Demo accounts:</strong><br>
+      Admin → admin@store.com / admin123<br>
+      User → user@store.com / user123
+    </div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn btn-block">Login</button>
+    </form>
+
+    <p class="auth-foot">Don't have an account? <a href="register.html">Register</a></p>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

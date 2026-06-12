@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP Store — Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Welcome to MP Store 🛍️</h1>
+      <p>Quality products, easy checkout with JazzCash, EasyPaisa & Cash on Delivery.</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+      </select>
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="grid" id="productGrid">
+      <div class="empty">Loading products...</div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

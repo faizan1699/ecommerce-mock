@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — MP Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container" id="checkoutMain">
+    <h1 class="page-title">Checkout</h1>
+    <div class="layout-2">
+      <form id="checkoutForm">
+        <div class="summary" style="position:static;margin-bottom:20px">
+          <h3>Delivery Details</h3>
+          <div class="form-group">
+            <label for="custName">Full Name</label>
+            <input type="text" id="custName" required>
+          </div>
+          <div class="form-group">
+            <label for="custEmail">Email</label>
+            <input type="email" id="custEmail">
+          </div>
+          <div class="form-group">
+            <label for="custPhone">Phone</label>
+            <input type="text" id="custPhone" placeholder="03XXXXXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="custAddress">Delivery Address</label>
+            <textarea id="custAddress" rows="3" placeholder="House #, Street, City" required></textarea>
+          </div>
+        </div>
+
+        <div class="summary" style="position:static">
+          <h3>Payment Method</h3>
+          <div class="pay-methods">
+            <div class="pay-option active" data-method="jazzcash">
+              <div class="badge jazz">JC</div>
+              <div>
+                <strong>JazzCash</strong>
+                <div style="font-size:13px;color:var(--muted)">Pay via JazzCash mobile wallet</div>
+              </div>
+            </div>
+            <div class="pay-option" data-method="easypaisa">
+              <div class="badge easy">EP</div>
+              <div>
+                <strong>EasyPaisa</strong>
+                <div style="font-size:13px;color:var(--muted)">Pay via EasyPaisa mobile wallet</div>
+              </div>
+            </div>
+            <div class="pay-option" data-method="cod">
+              <div class="badge cod">COD</div>
+              <div>
+                <strong>Cash on Delivery</strong>
+                <div style="font-size:13px;color:var(--muted)">Pay with cash when delivered</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="walletFields">
+            <div class="form-group">
+              <label id="walletLabel">JazzCash Mobile Number</label>
+              <input type="text" id="walletNumber" placeholder="03XXXXXXXXX">
+            </div>
+            <p style="font-size:12px;color:var(--muted);margin-top:-8px">
+              ⚠️ Demo mode — no real payment is processed. No OTP / no gateway.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-block" id="placeOrderBtn" style="margin-top:14px">
+            Place Order
+          </button>
+        </div>
+      </form>
+
+      <div class="summary" id="summary"></div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
