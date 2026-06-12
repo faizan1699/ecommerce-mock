@@ -1,4 +1,9 @@
-const API = "http://localhost:3000";
+const IS_LOCAL =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
+const API = IS_LOCAL
+  ? "http://localhost:3000"
+  : "https://my-json-server.typicode.com/faizan1699/ecommerce-mock";
 
 function getCurrentUser() {
   const raw = localStorage.getItem("currentUser");
